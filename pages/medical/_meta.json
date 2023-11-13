@@ -2,7 +2,15 @@
     "nuance": {
         "title": "Nuance",
         "theme": {
-            "layout": "full"
+            "layout": "default"
         }
-    }
+    },
+    "segmed": "segmed",
+    "mgb": "MGB",
+    "radimagenet": "Radimagenet",
+    "florencemd_unicl_lake": "florencemd_unicl_lake",
+    "chestImaGenome": "Chest ImaGenome",
+    "mimic-cxr": "mimic-cxr",
+    "benchmark_rsna_boneage": "benchmark_rsna_boneage",
+    "segmed_centaur_100k": "segmed_centaur_100k"
 }
