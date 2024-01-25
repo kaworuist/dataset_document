@@ -1,5 +1,31 @@
 {
-    "index":"Introduction",
-    "medical": "Medical Datasets",
-    "video": "Video Datasets"
+    "index": {
+        "title": "Introduction",
+        "theme": {
+            "layout": "full"
+        }
+    },
+    "medical": {
+        "title": "Medical Datasets",
+        "theme": {
+            "toc": true
+        }
+    },
+    "video": {
+        "title": "Video Datasets",
+        "theme": {
+            "layout": "full"
+        }
+    },
+    "image": {
+        "title": "Image Datasets",
+        "theme": {
+            "layout": "full"
+        }
+    },
+    "Logout": {
+        "title": "Logout",
+        "type": "page",
+        "href": "/api/auth/signout?callbackUrl=/"
+    }
 }

@@ -1,5 +1,17 @@
 export default {
-    logo: <span>Datasets Documentation</span>,
+    logo: <span>Datasets Summary</span>,
+    head: (
+      <>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="ACV Datasets summary" />
+        <meta property="og:description" content="ACV Datasets summary" />
+      </>
+    ),
+    useNextSeoProps() {
+      return {
+        titleTemplate: 'ACV Datasets summary'
+      }
+    },
     project: {
       link: 'https://msazure.visualstudio.com/VisionIntelligence/_git/VMLP.Platform.DataProcessing',
       icon: (

@@ -1,0 +1,40 @@
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.error {
+  line-height: 48px;
+}
+
+.error h1 {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  padding-right: 23px;
+  font-size: 24px;
+  font-weight: 500;
+  vertical-align: top;
+  border-right: 1px solid gray;
+}
+
+.error p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.error a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  color: rgb(0, 105, 194);
+  cursor: pointer;
+}
+
+.error img {
+  width: 300px;
+  height: 300px;
+  margin-top: 20px;
+}

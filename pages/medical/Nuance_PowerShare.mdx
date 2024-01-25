@@ -1,0 +1,90 @@
+### Dataset Details (Until 10/26)
+
+- Dataset Source: Continuous stream
+- Modalities: CR, DX, XR, CT, MR, MG
+- Data Count (studies):
+  - CR, DX, XR: 88,502
+  - CT: 96,567
+  - MR: 63,369
+  - MG: 115,356
+- Data count (studies+report pairs): 27,866
+- Data Size(GBs/TBs):
+  - CR, DX, XR: 15.08GB
+  - CT: 30.52TB
+  - MR: 9.38TB
+  - MG: Not tabulated
+- Confidential Data: Yes
+- Data Classification: De-identified, May Contain PHI
+
+### Data Paths
+
+Please find the respective paths for different types of data:
+
+- **DICOM Data Path**: `stnuancedataeus002/raw-data/data/MODALITY/IBID/STUDYUID/SERIESUID/IMAGE.dcm`
+- **Report Data Path**: `stnuancedataeus002/raw-data/reports/IBID/STUDYUID.json`
+- **Metadata Path**: `stnuancedataeus002/raw-data/metadata/IBID/STUDYUID.json`
+
+Note: `stnuancedataeus002/raw-data` represents the path for the Azure storage account and container.
+
+Input files, also known as ibid list files, are at `https://stnuancedataeus001.blob.core.windows.net/dev/allowed_ibids/`. They comprise 81 IBIDs across 32 txt files, divided by data size.
+
+### Sample of Metadata Schema:
+
+```json
+{
+  "images": {
+    "MG/107865/1.2.840.10008.114051.235361.1095065602.734440625.866593696/1.2.840.10008.114051.576596.292937336.373519842.1703958770/1.2.840.10008.114051.703554.292937336.512774890.1241212125.dcm": {
+      "Ingestion Date": "20230501",
+      "Study Date": "20171113",
+      "Upload Date": "2023-04-25T18:52:22Z"
+    },
+    "MG/107865/1.2.840.10008.114051.235361.1095065602.734440625.866593696/1.2.840.10008.114051.642653.292937336.314967575.2020721118/1.2.840.10008.114051.534276.292937336.573884804.1109040743.dcm": {
+      "Ingestion Date": "20230501",
+      "Study Date": "20171113",
+      "Upload Date": "2023-04-25T18:52:22Z"
+    }
+  }
+}
+```
+
+### Number of Images
+
+- Over 146 million
+
+### Primary File Types
+
+- .dcm
+
+### Details in OneNote page
+
+- [Nuance Details](<https://microsoft.sharepoint.com/teams/VisionMachineLearningPlatform/_layouts/15/Doc.aspx?sourcedoc=%7Bc93d91d3-a9bf-4b7c-b6df-6effc77482e9%7D&action=edit&wd=target(Projects%2FData%20processing%20progress.one%7C753306c1-5077-4c43-af79-707f77138530%2FSummary%7Cf98ae0a3-8dcd-45c0-8a12-580b90f5414c%2F)&wdorigin=NavigationUrl&share=IgHTkT3Jv6l8S7bfbv_HdILpAfRmmL5ByPp9k17vGRgQpIk>)
+
+### Visualization URL
+
+- [FiftyOne Visualization](http://10.249.238.11:2382/datasets/segmed_delivery_1_centaur_test_roi_v3)
+
+### Data Usage rights
+
+This data is currently available only:
+
+1. For the purpose of Florence project, as documented, submitted and approved by both Nuance and Microsoft legal/privacy/compliance teams  
+   a. Same pathology / same patient / same exam
+2. Microsoft teammates who were approved, and who have completed the necessary HIPAA training
+3. Specifically, to develop features / capabilities to help Nuance healthcare products/solutions
+
+### Restrictions
+
+1. While our engineering teams made efforts to reduce PHI/PII in the data to minimize risk, the data is not classified as legally “de-identified”. It needs to be handled with the required care & safe guards
+2. The data should be kept in the approved location(s) and processed in the manner described for the approved purpose. It cannot be copied out of these location(s), nor accessed by those who are not authorized. Both Microsoft and Nuance teams are responsible for fulfilling these requirements.
+
+### Data Terms
+
+Only approved for retention until the earlier of (A) no longer being needed or (B) three years.
+
+### Approved Use Cases
+
+1. Same Exam
+2. Same Patient
+3. Same Pathology
+4. Synthetic Data Generation
+5. Smart Impression (PowerScribe ONLY)

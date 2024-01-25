@@ -1,0 +1,46 @@
+### Dataset description
+
+Filter from Bing index
+
+### Summary
+
+##### 0~15s
+
+- Raw Videos: https://acvdpwu2p001ast.blob.core.windows.net/bing-videos/videos_15s/data/wwwyoutubecom/videos/
+- Merged metadata tsv files: https://acvdpwu2p001ast.blob.core.windows.net/bing-videos/videos_15s/data/wwwyoutubecom/metadata/merged.tsv
+- Notes: We haven't used UUID to save the videos during that time. So all video name are YouTube id. And we didn't download YouTube metadata.
+
+##### 16~30s:
+
+- Raw filtered out merged tsv: https://acvdpwu2p001ast.blob.core.windows.net/bing-videos/videos_16s-30s/merged_tsv/VideoMetaData_Merged.tsv
+- There are 291 groups of video URLs in total. Each groups contains 50 files and each file contains 10k URLs.
+  https://acvdpwu2p001ast.blob.core.windows.net/bing-videos/videos_16s-30s/splited_tsv/
+- UUID index mapping: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing*videos/16-30s/uuid_index/youtube/uuid*[a-h].idx
+- Notes: we have UUID index file and metadata file which contains the caption from bing index, you can find them in splited_tsv folder.
+
+##### 31~60s:
+
+- Downloaded videos path: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/videos/raw
+- UUID index mapping: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing*videos/31-60s/videos_31s-60s_UUID_index*[a-h].txt
+- Notes: There is no UUID index list for these videos. We are generate the UUID index list and it will be ready tomorrow.
+
+##### 61s+ YouTube Videos:
+
+- Downloaded videos path: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/videos/360p
+- Videos metadata json in https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/info
+- Notes: We have metadata json from YouTube videos, they are stored in the above info folder. It can be found by UUID.
+- UUID index mapping:
+  - 61~120s: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing_videos/61-120s/VideoMetaDataPart_61_120s_UUID_index*[a-h].txt
+  - 121~180s: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing_videos/121-180s/VideoMetaDataPart_121_180s_UUID_index*[a-h].txt
+  - 181~240s: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing_videos/181-240s/VideoMetaDataPart_181_240s_UUID_index*[a-h].txt
+  - 241~300s: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing_videos/241-300s/VideoMetaDataPart_241_300s_UUID_index*[a-h].txt
+  - 301~600s: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing_videos/301-600s/VideoMetaDataPart_301_600s_UUID_index*[a-h].txt
+  - 601~1800s: https://acvdpwu2p005[a-h]st.blob.core.windows.net/raw-data/bing_videos/601-1800s/VideoMetaDataPart_601_1800s_UUID_index*[a-h].txt
+
+### Files count
+
+53,703,541
+
+### Annotationed?
+
+### Visualization URL

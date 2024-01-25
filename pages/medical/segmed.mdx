@@ -1,28 +1,140 @@
-### Storage path
+### Data Details
 
-https://medicalimagingeu2.blob.core.windows.net/segmed/
-https://medicalimagingeu2.blob.core.windows.net/segmed-2/
+| Dataset Source |                                              Modalities                                              |           Data Count (studies)            |     Data count (studies+report pairs)     |            Data Size(GBs/TBs)            | Confidential Data | Data Classification |
+| :------------: | :--------------------------------------------------------------------------------------------------: | :---------------------------------------: | :---------------------------------------: | :--------------------------------------: | :---------------: | :-----------------: |
+|   March 2023   |                        XR<br/>CT (incl. PET/CT)<br/>MR (incl. PET/MR)<br/>MG                         | 256,897<br/>114,831<br/>107,048<br/>5,968 | 256,897<br/>114,831<br/>107,048<br/>5,968 | 3.62TB<br/>25.66TB<br/>4.19TB<br/>2.33TB |        No         |    De-identified    |
+|    May 2023    |                            XR<br/>CT (incl. PET/CT)<br/>MR (incl. PET/MR)                            |      331,330<br/>169,602<br/>197,111      |      331,330<br/>169,602<br/>197,111      |      6.24TB<br/>32.03TB<br/>5.69TB       |        No         |    De-identified    |
+|                |                                                  MG                                                  |                   2,317                   |                   2,317                   |                                          |                   |                     |
+|   Sept 2023    | CT Abdomen/Liver Exams W/WO Contrast,<br/>CT Brain with Intracranial Region included,<br/>XRay Chest |           1100<br/>500<br/>500            |           1100<br/>500<br/>500            |                                          |        No         |    De-identified    |
 
-### Size
+[Segmed batches statistic.xlsx](https://microsoftapc-my.sharepoint.com/:x:/g/personal/v-junjianxia_microsoft_com/Eb73eOLIZaNKuR4YnkB1sRMB2VXJRNb9QIRSD6LZOlfSZw?e=V9HPVn)
 
-191.5TB
+### Batches statistic
 
-### Data count\(Images\)
+| BATCH  | modality | study count | series count | image count | zip count | reports count |
+| :----: | :------: | :---------: | :----------: | :---------: | :-------: | :-----------: |
+| BATCH1 |    CT    |   56,706    |   320,624    | 46,111,175  |   1,961   | 58,157        |
+| BATCH1 |    MR    |   58,677    |   498,693    | 17,588,889  |    632    | 58,677        |
+| BATCH1 |   XRAY   |   211,989   |   348,398    |   374,258   |    446    | 216,142       |
+| BATCH2 |  MAMMO   |    5,968    |    11,339    |   45,398    |    272    | 8,285         |
+| BATCH2 |    CT    |   58,125    |   535,881    | 66,684,237  |   2,194   | 59,708        |
+| BATCH2 |    MR    |   48,371    |   424,990    | 18,244,645  |    232    | 48,371        |
+| BATCH2 |   XRAY   |   41,173    |    71,677    |   125,221   |    90     | 41,173        |
+| BATCH3 |   XRAY   |    3,735    |    10,789    |    5,883    |     5     | 3,735         |
+| BATCH4 |    MR    |   197,111   |  1,719,837   | 67,935,156  |    826    | 197,111       |
+| BATCH4 |    CT    |   169,602   |  1,263,935   | 144,314,478 |   3,994   | 169,602       |
+| BATCH4 |   XRAY   |   331,330   |   500,616    |  7,501,826  |    717    | 352,383       |
+| BATCH4 |  MAMMO   |    2,317    |    4,226     |   17,276    |    103    | 2,317         |
 
-370million
+### Data paths
 
-### Modalities
+The source zip files are located at:
 
-XRAY, CT, MAMMO, MR
+- https://medicalimagingeu2.blob.core.windows.net/segmed/
+- https://medicalimagingeu2.blob.core.windows.net/segmed-2/
 
-### Main types
+**Medicalimagingeu2**:
 
-.dcm, .json
+- XRAY PNG:
+  - https://medicalimagingeu2.blob.core.windows.net/processed-segmed/delivery-batch-1/XRAY/dicom/**/*.png
+  - https://medicalimagingeu2.blob.core.windows.net/processed-segmed/delivery-batch-2/XRAY/dicom/**/*.png
+  - https://medicalimagingeu2.blob.core.windows.net/processed-segmed/delivery-batch-3/XRAY/dicom/**/*.png
+  - https://medicalimagingeu2.blob.core.windows.net/processed-segmed/delivery-batch-4/XRAY/Dicom/**/*.png
 
-### Studies count
+> **Note:** The data has been copied to 8 storage accounts.
 
-XRAY: 588,227  CT:284,443  MR:304,159  MAMMO:8,285 ...
+**Medicalimagingeu2ast**:
+
+- Dicom:
+  - https://medicalimagingeu2ast.blob.core.windows.net/segmed/extracted/batch1/MR/dicom/
+  - https://medicalimagingeu2ast.blob.core.windows.net/segmed/extracted/batch1/XRAY/dicom/
+- Report:
+  - https://medicalimagingeu2ast.blob.core.windows.net/segmed/batch1/MR/MR_Batch_1_Reports.csv
+  - https://medicalimagingeu2ast.blob.core.windows.net/segmed/batch1/XRAY/XRAY_Batch_1_Reports.csv
+
+**Medicalimagingeu2bst**:
+
+- Dicom:
+  - https://medicalimagingeu2bst.blob.core.windows.net/segmed/extracted/batch1/CT/dicom/
+- Report:
+  - https://medicalimagingeu2bst.blob.core.windows.net/segmed/batch1/CT/CT_Batch_1_Reports.csv
+
+**Medicalimagingeu2cst**:
+
+- Dicom:
+  - https://medicalimagingeu2cst.blob.core.windows.net/segmed/extracted/batch2/MAMMO/dicom/
+  - https://medicalimagingeu2cst.blob.core.windows.net/segmed/extracted/batch2/MR/dicom/
+  - https://medicalimagingeu2cst.blob.core.windows.net/segmed/extracted/batch2/XRAY/dicom/
+- Report:
+  - https://medicalimagingeu2cst.blob.core.windows.net/segmed/batch2/MAMMO/MAMMO_Batch_2_Reports.csv
+  - https://medicalimagingeu2cst.blob.core.windows.net/segmed/batch2/MR/MR_Batch_2_Reports.csv
+  - https://medicalimagingeu2cst.blob.core.windows.net/segmed/batch2/XRAY/XRAY_Batch_2_Reports.csv
+
+**Medicalimagingeu2dst**:
+
+- Dicom:
+  - https://medicalimagingeu2dst.blob.core.windows.net/segmed/extracted/batch2/CT/dicom/
+- Report:
+  - https://medicalimagingeu2dst.blob.core.windows.net/segmed/batch2/CT/CT_Batch_2_Reports.csv
+
+**Medicalimagingeu2est**:
+
+- Dicom:
+  - https://medicalimagingeu2est.blob.core.windows.net/segmed/extracted/batch3/XRAY/dicom/
+- Report:
+  - https://medicalimagingeu2est.blob.core.windows.net/segmed/batch3/XRAY/2823_Ankle_XRAY_Batch_1_Reports.csv
+  - https://medicalimagingeu2est.blob.core.windows.net/segmed/batch3/XRAY/XRAY_Batch_1_Missing_Reports.csv
+
+**Medicalimagingeu2fst**:
+
+- Dicom:
+  - https://medicalimagingeu2fst.blob.core.windows.net/segmed/extracted/batch4/MAMMO/Dicom/
+  - https://medicalimagingeu2fst.blob.core.windows.net/segmed/extracted/batch4/MR/Dicom/
+  - https://medicalimagingeu2fst.blob.core.windows.net/segmed/extracted/batch4/XRAY/Dicom/
+- Report:
+  - https://medicalimagingeu2fst.blob.core.windows.net/segmed/batch4/MR/Reports/
+  - https://medicalimagingeu2fst.blob.core.windows.net/segmed/batch4/XRAY/merged_reports/batch4_XRAY_Reports.csv
+
+**Medicalimagingeu2gst**:
+
+- Dicom:
+  - https://medicalimagingeu2gst.blob.core.windows.net/segmed/extracted/batch4/CT/Dicom/
+- Report:
+  - https://medicalimagingeu2gst.blob.core.windows.net/segmed/batch4/CT/Reports/
+
+### Number of Images
+
+- 370 million
+
+### Primary File Types
+
+- .dcm, .json
 
 ### Details in OneNote page
 
-### Visualization URL
+- [Segmed](https://microsoft.sharepoint.com/teams/VisionMachineLearningPlatform/_layouts/OneNote.aspx?id=%2Fteams%2FVisionMachineLearningPlatform%2FShared%20Documents%2FVision_ML_Platform_2022&wd=target%28Projects%2FData%20processing%20progress.one%7C753306C1-5077-4C43-AF79-707F77138530%2FSegmed%7C7D69E717-228D-4C31-AF79-28715ACAB128%2F%29)
+
+### Data Usage rights
+
+Grant. Company hereby grants Microsoft and its Affiliates, under all of the Company’s intellectual property and proprietary rights, a non-exclusive, worldwide, perpetual, irrevocable, royalty free license to:
+
+1. Make, have made, use, have used, edit, copy, format, reproduce, modify, and prepare Resultant Works from the Licensed Data consistent with the Permitted Purpose;
+2. Publicly perform, publicly display, import, broadcast, transmit, license, advertise, market, rent, lease, lend, offer to sell and sell copies of, or otherwise distribute Resultant Works developed from the Licensed Data;
+3. Sublicense the foregoing rights including the right to grant further sublicenses for the Permitted Purpose; and
+4. All other related rights in the Licensed Data, which may be necessary or appropriate to utilize the rights granted in this Section 3.1 (Grant).
+
+### Restrictions
+
+1. Microsoft will not externally distribute or make the Licensed Data available in whole or in any material part as a standalone product; provided, however, Microsoft may republish or redistribute small fragments of the original Licensed Data as a part of the Resultant Works as long as they are less than one percent of the Licensed Data in each instance. If the small fragments are more than one percent of the Licensed Data in any instance, such republishing and distribution are subject to written consent of the Company, not to be unreasonably withheld. Microsoft shall only use the Licensed Data as described in this Section 3.
+2. Without limiting the foregoing and except as otherwise expressly permitted in this Agreement, Microsoft shall not at any time, directly or indirectly (i) use the Licensed Data to derive where Licensed Data came from for the purpose of contacting the Company’s data licensor or attempt to reverse engineer the process used by Company to compile the Licensed Data for Microsoft; or (ii) reidentify the Licensed Data to identify any individuals
+3. Microsoft will not use the Licensed Data for sale of synthetic data, without Company’s written consent, not to be unreasonably withheld; provided that, Microsoft may use the Licensed Data to generate synthetic data for internal use, including training artificial intelligence models with such Microsoft generated synthetic data and then selling such synthetic data trained models, which may include the ability to create synthetic data.
+
+### Data Terms
+
+- Perpetual
+
+### Approved Use Cases
+
+1. Same Exam
+2. Same Patient
+3. Same Pathology

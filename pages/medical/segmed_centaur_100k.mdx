@@ -1,21 +1,38 @@
-### Storage path
+### Data Details
 
-https://medicalimaging.blob.core.windows.net/prod-benchmark/image-retrieval/segmed-centaur-100k/
+| Modalities                       | Data Count (studies) | Data count (studies+report pairs) | Data Size(GBs/TBs) | Confidential Data | Data Classification |
+| :------------------------------- | :------------------- | :-------------------------------- | :----------------- | :---------------- | :------------------ |
+| Chest X-ray grounded annotations | 49,000               | 49,000                            | 48.67GB            | No                | De-identified       |
 
-### Size
+### Data paths
 
-### Data count\(Images\)
+- https://medicalimaging.blob.core.windows.net/segmed-centaur-xray-100k/centaur_share/data2_png/
 
-### Modalities
+### Primary File Types
 
-### Main types
+- .png
 
-.png
+### Data Usage rights
 
-### Studies count
-
-### Details in OneNote page
+Data annotation services
 
 ### Visualization URL
 
-[FiftyOne](http://10.249.238.11:2382/datasets/segmed_delivery_1_centaur_test_roi_v3)
+- [FiftyOne](http://10.249.238.11:2382/datasets/segmed_delivery_1_centaur_test_roi_v3)
+
+### Restrictions
+
+1. Microsoft will share 100,000 de-identified medical records (Frontal Chest X-ray images and text reports) ('Microsoft Records'). Supplier shall only process Microsoft Records in accordance with this SOW and only as a Processor under the PO Terms.
+2. Supplier will use the text reports in the Microsoft Records ('Text Reports') to annotate the images (draw bounding boxes) in the Microsoft Records ('Images') with texts from findings and impressions section of the Text Reports. Supplier will flag and share with Microsoft, any Image that they find is a part of any series and will annotate such Images.
+3. Supplier will also generate standardized text labels for each Image from the annotations. For example, tag the corresponding Images whose Text Reports contain findings like 'effusion', 'pneumothorax', 'cardiomegaly', etc. with the standard label. Supplier will create as many labels as necessary to cover the clinically relevant findings represented in the dataset.
+4. Supplier will use a list of 124 findings to annotate in about 100 Images. There may be multiple findings in an Image and Supplier will annotate all the findings they encounter.
+
+### Data Terms
+
+- Perpetual
+
+### Approved Use Cases
+
+1. Same Exam
+2. Same Patient
+3. Same Pathology

@@ -1,4 +1,5 @@
 {
+    "bing_index_videos": "bing index videos",
     "YTTemporal1B": "YTTemporal1B",
     "weakdcg": "weakdcg",
     "MSR-VTT": "MSR-VTT",
@@ -27,16 +28,5 @@
     "Sports-1M": "Sports-1M",
     "Youtube-BoundingBoxes": "Youtube-BoundingBoxes",
     "Yttemporal180m": "Yttemporal180m",
-    "Dreamstime": "Dreamstime",
-    "Reddit": "Reddit",
-    "YouTube": "YouTube",
-    "Vimeo": "Vimeo",
-    "TikTok": "TikTok",
-    "Facebook": "Facebook",
-    "okru": "ok.ru",
-    "DailyMotion": "DailyMotion",
-    "Shutterstock": "Shutterstock",
-    "Instagram": "Instagram",
-    "Vk": "Vk",
-    "Bilibili": "Bilibili"
+    "Dreamstime": "Dreamstime"
 }

@@ -1,25 +1,52 @@
-import Color from '../../component/color'
+### Data Details
 
-### Storage path
+| Modalities                                                       | Data Count (studies)                                                 | Data count (studies+report pairs) | Data Size(GBs/TBs)                                               | Confidential Data | Data Classification |
+| :--------------------------------------------------------------- | :------------------------------------------------------------------- | :-------------------------------- | :--------------------------------------------------------------- | :---------------- | :------------------ |
+| XR<br/>CT<br/>MR<br/>PT<br/>US<br/>MG<br/>OT, PR, RF<br/>Unknown | 65,997<br/>124,128<br/>261,030<br/>14<br/>15<br/>3<br/>96<br/>15,971 | 458,515                           | 189.67GB<br/>4.13TB<br/>5.4TB<br/>/<br/>/<br/>/<br/>/<br/>13.8GB | Yes               | De-identified       |
 
-<Color color={'red'}>Cannot find in original place</Color>
+### Data paths
 
-### Size
+- Dicom:
+  - https://medicalimaging.blob.core.windows.net/radimagenet/image/
+- Report:
+  - https://medicalimaging.blob.core.windows.net/radimagenet/report/
 
-Unknown
+### Primary File Types
 
-### Data count\(Images\)
-
-### Modalities
-
-### Main types
-
-.png
-
-### Studies count
+- .png
 
 ### Details in OneNote page
 
+- [Radimagenet](https://microsoft.sharepoint.com/teams/VisionMachineLearningPlatform/_layouts/OneNote.aspx?id=%2Fteams%2FVisionMachineLearningPlatform%2FShared%20Documents%2FVision_ML_Platform_2022&wd=target%28Projects%2FData%20processing%20progress.one%7C753306C1-5077-4C43-AF79-707F77138530%2FRadimagenet%7C9DFEE144-555F-4C0C-BD0E-EED0E25E6503%2F%29)
+
 ### Visualization URL
 
-[FiftyOne](http://10.249.238.11:2382/datasets/segmed_delivery_1_centaur_test_roi_v3)
+- [FiftyOne](http://10.249.238.11:2382/datasets/segmed_delivery_1_centaur_test_roi_v3)
+
+### Data Usage rights
+
+Grant. Company hereby grants Microsoft and its Affiliates, under all of the Company’s intellectual property and proprietary rights, a non-exclusive, worldwide, perpetual, irrevocable, royalty free license to:
+
+1. Make, have made, use, have used, edit, copy, format, reproduce, modify, and prepare Resultant Works from the Licensed Data consistent with the Permitted Purpose;
+2. Publicly perform, publicly display, import, broadcast, transmit, license, advertise, market, rent, lease, lend, offer to sell and sell copies of, or otherwise distribute Resultant Works developed from the Licensed Data;
+3. Sublicense the foregoing rights including the right to grant further sublicenses for the Permitted Purpose; and
+4. All other related rights in the Licensed Data, which may be necessary or appropriate to utilize the rights granted in this Section 3.1 (Grant).
+
+### Restrictions
+
+1. Microsoft will not externally distribute or make the Licensed Data available in whole or in any material part as a standalone product; provided, however, Microsoft may modify, copy, reproduce, republish, redistribute, and sublicense:
+   a. Randomized fragments of the original Licensed Data as a part of the Resultant Works; and
+   b. The Licensed Data and make it available to third parties who have signed a non-disclosure agreement with Microsoft to use the License Data for evaluating, testing, benchmarking, or demonstrating Resultant Works and other machine learning models that were not developed, trained, or improved using the Licensed Data.
+
+2. Microsoft will not attempt to re-identify Personal Data (as defined in 7.2(e) of this Agreement) from the Licensed Data, nor use the Licensed Data to contact any of the individuals whose Personal Data may be associated with the Licensed Data. Microsoft will make clear to any of its licensees, sublicensees, and/or third-party vendors that they also will not attempt to re-identify Personal Data from the Licensed Data, nor contact any of the individuals using the Licensed Data, and that the licensees, sublicensees, and/or third-party vendors have an affirmative duty to inform Microsoft if either has occurred to their knowledge. Microsoft will notify Company as soon as possible if Microsoft becomes aware of any such attempt, whether deliberate or inadvertent, to re-identify or contact using the Licensed Data.
+
+### Data Terms
+
+- Perpetual
+
+### Approved Use Cases
+
+1. Same Exam
+2. Same Patient
+3. Same Pathology
+4. Synthetic Data Generation

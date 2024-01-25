@@ -1,23 +1,41 @@
-### Storage path
+### Data Details
 
-https://medicalimaging.blob.core.windows.net/mgb/
+| Modalities                                                                               | Data Count (studies)                  | Data count (studies+report pairs) | Data Size(GBs/TBs)                              | Confidential Data | Data Classification |
+| :--------------------------------------------------------------------------------------- | :------------------------------------ | :-------------------------------- | :---------------------------------------------- | :---------------- | :------------------ |
+| X-rays<br/>CTs<br/>MRs<br/>Chest exams with findings<br/>XR Pediatric Hands (0-18 years) | 2500<br/>900<br/>420<br/>1500<br/>120 | /<br/>/<br/>/<br/>1415<br/>120    | Not yet fully received. Transfer is in progress | No                | De-identified       |
 
-### Size
+### Data paths
 
-1TB
+- https://medicalimaging.blob.core.windows.net/mgb/
 
-### Data count\(Images\)
+### Primary File Types
 
-### Modalities
+- .dcm
+- .7z
 
-XRAY, CT, MR, CXR
+### Data Usage rights
 
-### Main types
+Proof of Concept  
+Fine tune Foundation Model for Medical imaging for these 2 use cases:
 
-.dcm, .7z
+1. Radiology Exam/Series Type Classification
+2. Image-Image search (image features, disease, anatomy)
 
-### Studies count
+a. MGB owns the Project Data Set, and the Project Data Set is not subject to any existing third party licensing terms.  
+b. The Project Data Set does not contain, or MGB has removed prior to delivering the Project Data Set, any Personal Data. “Personal Data” means any information relating to an identified or identifiable natural person, or is otherwise “protected health information,” “individually identifiable health information,” “personal data,” “personal information,” “personally identifiable information,” or similar designation under and regulated by applicable laws, rules, regulations, governmental requirements currently in effect, or as they become effective, relating in any way to the privacy, confidentiality, or security of an individual's data.
 
-### Details in OneNote page
+### Restrictions
 
-### Visualization URL
+For the purposes of this Project Agreement No. 2, the permitted data use rights (“Permitted Use”) under the License to the Project Data Set granted by MGB to Nuance as set forth in Section 6(e) of the MRCA also includes Nuance Affiliates, and without limitation, (i) model training, improvement, testing and validation, (ii) education and research, and (iii) technical support and maintenance. The Project Data Set may not be used for any other purposes beyond the Permitted Use without prior written consent of MGB.
+
+### Data Terms
+
+- Perpetual
+- Reach out to Lisa/ Mert/Jacques for MSRA agreement between Nuance and MGB for data sharing
+
+### Approved Use Cases
+
+1. Same Exam
+2. Same Patient
+3. Same Pathology
+4. Synthetic Data Generation
